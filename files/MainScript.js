@@ -225,7 +225,6 @@ $( document ).ready(function() {
 
 var lastScrollTop = 0;
 var menu_state = true;
-alert($( ".container_2_text_part" ).css('opacity'));
 $(window).scroll(function(event){
 	if (is_scrolling_locked_menu_nav || is_scrolling_locked_notifi) {
 		$(window).scrollTop(lastScrollTop_stop_scroll);
