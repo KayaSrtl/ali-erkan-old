@@ -169,7 +169,8 @@ background-position: 20%;
 
 .menu_button_clickk {
 	border: solid black 5px;
-	background-image: url("https://static.moooi.com/static/images/nav-button.png");
+	/*background-image: url("https://static.moooi.com/static/images/nav-button.png");*/
+	background-image: url("photos/menu_background.png");
 	  background-repeat: no-repeat;
 		background-size: 100% 100%;
 	border-radius: 100px;
@@ -183,6 +184,67 @@ background-position: 20%;
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+.choose_country {
+	display: block;
+	position: fixed;
+	width: 100%;
+	z-index: 200;
+}
+
+.choose_country_cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} 
+
+.close_country {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+	z-index: 9;
+	background-color: rgba(48, 48, 48);
+	opacity: 0.4;
+}
+
+
+.choose_country_cont_2 { 
+	display: block;
+	padding: 30px;
+	background: black;
+	border-radius: 20px;
+	position: relative;
+	z-index: 10;
+}
+.choose_country_cont_3 { 
+
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.choose_country_text {
+	text-align: center;
+	font-size: 25px;	
+}
+
+.country_choose {
+	margin: 20px;
+}
+
+.close_button_country {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.close_button_img {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
 }
 
 .fixed_menu {
@@ -815,21 +877,13 @@ input[type="text"] {
 }
 
 .navicon_button {
-  display: inline-block;
-  cursor: pointer;
+	display: inline-block;
+	cursor: pointer;
 }
 
-.close_nav {
-	position: fixed;
-	background-color: rgba(48, 48, 48);
-	height: 100%;
-	width: 100%;
-	z-index: 7;
-	opacity: 0.4;
-	display: none;
-}
 
-.close_notifi {
+
+.close_button_all_screen {
 	position: fixed;
 	background-color: rgba(48, 48, 48);
 	height: 100%;
@@ -964,6 +1018,7 @@ input[type="text"] {
 	background-color: #2d3633;
 	color: white;
 	position: relative;
+	z-index: 6;
 }
 
 .contect_part_cont {
@@ -1199,8 +1254,7 @@ input[type="text"] {
 .container_1 {
 	
 	/* background: linear-gradient(45deg, rgba(209, 229, 230, 1) 0%, rgba(167, 205, 207, 1) 11%, rgba(132, 193, 196, 1) 22%, rgba(101, 189, 194, 1) 33%, rgba(75, 190, 196, 1) 44%, rgba(48, 184, 191, 1) 55%, rgba(28, 178, 186, 1) 66%, rgba(11, 143, 150, 1) 77%, rgba(12, 194, 204, 1) 88%, rgba(12, 223, 235, 1) 100%); */
-	background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(249, 248, 247, 1) 11%, rgba(242, 240, 237, 1) 22%, rgba(242, 240, 237, 1) 33%, rgba(230, 228, 225, 1) 44%, rgba(240, 236, 230, 1) 55%, rgba(235, 228, 218, 1) 66%, rgba(222, 216, 206, 1) 77%, rgba(227, 219, 204, 1) 88%, rgba(227, 219, 199, 1) 100%);
-	background-size: 400% 400%; 
+
 	animation: gradient 20s ease infinite;
 	/* RENKLİ VE DÖNÜŞÜMLÜ ARKA PLAN KODLARI */
 	display: flex;
@@ -1210,9 +1264,13 @@ input[type="text"] {
 	height: 100%;
 	float: left;
 	color: black;
+		background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(249, 248, 247, 1) 11%, rgba(242, 240, 237, 1) 22%, rgba(242, 240, 237, 1) 33%, rgba(230, 228, 225, 1) 44%, rgba(240, 236, 230, 1) 55%, rgba(235, 228, 218, 1) 66%, rgba(222, 216, 206, 1) 77%, rgba(227, 219, 204, 1) 88%, rgba(227, 219, 199, 1) 100%);
+	
+	background-size: 400% 400%; 
 	width: 50%;
 	text-align: left;
 	position: relative;
+	z-index: 6;
 }
 
 .container_1_text_part_sec {
@@ -1220,8 +1278,6 @@ input[type="text"] {
 	margin-top: 0px;
 	position: absolute;
 	z-index: 6;
-		background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(249, 248, 247, 1) 11%, rgba(242, 240, 237, 1) 22%, rgba(242, 240, 237, 1) 33%, rgba(230, 228, 225, 1) 44%, rgba(240, 236, 230, 1) 55%, rgba(235, 228, 218, 1) 66%, rgba(222, 216, 206, 1) 77%, rgba(227, 219, 204, 1) 88%, rgba(227, 219, 199, 1) 100%);
-	background-size: 400% 400%; 
 	animation: gradient 20s ease infinite;
 }
 
@@ -1367,6 +1423,7 @@ input[type="text"] {
 }
 
 .product_background_gradient {
+	display: none;
 	top: 0;
 	width: 100%; 
 	background-color: white;
