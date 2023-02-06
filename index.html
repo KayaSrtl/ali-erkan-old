@@ -1,0 +1,482 @@
+<!-- Copyright 2021 Rockie Inc. All Rights Reserved.  -->
+<!DOCTYPE html>
+<html  lang="tr" dir="ltr" data-cast-api-enabled="true">
+<head>
+<title> Hope</title>
+<link rel="icon" href="./Files/h_college_change.png" type="image/gif" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0, minimum-scale=1">
+<noscript>
+<style>
+.main_noscript_div {
+	height:	300px;
+	width: 450px;
+	position: fixed;
+	z-index: 20;
+	top: 50%;
+	left: 50%;
+	margin-left: -227px;
+	margin-top: -152px;
+	background-color: grey;
+	color: white;
+	font-family: Atkinson Hyperlegible, sans-serif;
+	border-radius: 10px;
+	border: solid 4px white;
+}
+.noscript_text {
+	font-size: 25px;
+	text-align: center;
+	margin: 30px 40px;
+}
+.noscript_header {
+	text-align: center;
+	margin: 20px;
+}
+.noscript_button {
+	font-size: 20px;
+	position: fixed;
+	width: 150px;
+	height: 80px;
+	text-align: center;
+	margin-left: 50%;
+	left: -75px;
+	font-family: Atkinson Hyperlegible, sans-serif;
+	box-shadow: 4px 4px black;
+	cursor: pointer;
+	border: solid 2px black;
+}
+.noscript_button:hover {
+	box-shadow: 2px 2px black;
+	background-color: blue;
+	color: white;
+}
+.cover_page {
+	background-color: black;
+	opacity: 0.9;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 19;
+}
+ </style>
+<div class="main_noscript_div">
+<h1 class="noscript_header">JavaScript Error</h1>
+<h3 class="noscript_text">It looks like JavaScript closed or not supported in your browser</h3>
+<form target="_blank" action="http://www.tizag.com/javascriptT/javascript-enable.php"><button class="noscript_button">click for help!</button></form>
+</div>
+<div class="cover_page"></div>
+</noscript>
+<link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible|Bebas Neue|Montserrat' rel='stylesheet'>
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--<script src="https://kit.fontawesome.com/1677a5edf1.js" crossorigin="anonymous"></script>-->
+<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css" crossorigin="anonymous">
+<script>
+
+</script>
+<script src="MainScript.js"></script>
+
+
+<!--<link rel="stylesheet/less" type="text/css" href="styles.less" />
+<script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>-->
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+<!--<div class="top_div">
+<img src=""  alt="logo" class="top_logo" />
+
+
+
+</div>-->
+
+<div class="fixed_menu noselect"  id="navbar">
+	<div class="fixed_menu_container">
+		<div class="category">
+
+			<a href="#ikinci" style="position: relative;" class="microphone_button_top_a">
+				<div class="icon_top_div">
+					<i class="fa-regular fa-microphone mini_logo_top" style="position: relative; top: 2px;" ></i>
+				</div>
+			</a>
+		</div>
+
+		<div class="top_part_logo">
+			<p>ALI ERKAN</p>
+		</div>
+		<div class="contect">
+
+		<a class="notification_bell"><div class="icon_top_div"><i class="fa-regular fa-bell"></i><div class="notification_number">5</div></div></a>
+			<a class="top_button_2">
+				<div class="icon_top_div">
+					<i class="fa-regular fa-cart-shopping top_button_2"></i>
+				</div>
+			</a>
+			<a class="search_part_a">
+				<div class="icon_top_div">
+					<i class="fa-regular fa-magnifying-glass mini_logo_top"></i>
+				</div>
+			</a>
+<!--<a class="user_photo_click" href="./login/login.html" style=" padding-bottom: 4px;"><img src="./Files/pp.jpg" class="user_photo"><i class="fa fa-sign-in sign_in"><p style="display: inline; margin: 0px; font-family: Bebas Neue;"> User</p></i>
+</a>-->
+		</div>
+	</div>
+</div>
+
+
+<div class="close_nav"></div>
+<div class="close_notifi"></div>
+
+<div class="wrapper top_button" style="position: fixed; right: 10px; bottom: 10px; margin-right: 0px; border-radius: 50px;">
+
+  <div class="icon menu_button_clickk" style="border-radius: 50px;">
+    <div class="tooltip">Menu</div>
+	<div class="navicon_button_container">
+	<a class="navicon_button_click" style="display: block; padding: 8px 15px 0px 15px; height: 47px; width: 20px background-color: red;">
+<div class="navicon_button">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+</a>
+</div>
+
+    <span><i class="fa fa-bar menu_icon_bottom"></i></span>
+  </div>
+</div>
+
+<div class="menu_contact">
+	<div class="menu_contact_container">
+		<span><i class="fa fa-search search_logo"></i></span>
+		<div class="search-container">
+	<form action="#">
+		<input type="text" placeholder="Search..." class="my-search-box">
+	</form>
+	</div>
+	</div>
+	<div class="menu_nav">
+		<div id="nav">
+			<div class="nav-item"><a class="nav-link selected_nav" href="#">Home</a></div>
+			<div class="nav-item"><a class="nav-link" href="#">About</a></div>
+			<div class="nav-item"><a class="nav-link" href="#">Services</a></div>
+			<div class="nav-item"><a class="nav-link" href="#">Contact</a></div>
+		</div>
+	</div>
+	
+</div>
+
+<div class="notificatins_menu">
+	<div class="notificatins_menu_cont_1">
+		<div class="notificatins_menu_cont_2">
+			<div class="notificatins_menu_msg">
+				<div class="notification_header">
+					<h1 class="notification_header_text">Header of 1</h1>
+					<div class="detail_opener" onClick="openDetail(1)"><i class="fa-regular fa-sort-down down_arrow_fav_opener" id="down_arrow_fav_opener_1"></i><p class="detail_opener_text">See the detail</p></div>
+				</div>
+				<div class="notification_content_container" id="notifi_cont_1">
+					<div class="notification_content">
+						<div class="notification_content_fav_cont">
+							<i class="fa-regular fa-arrow-turn-down-right"> </i>
+						</div>
+						<div class="notification_content_text_cont">
+							<p class="notification_content_text">example of a notification 1  sdasdasd asddasasdasa dsadsadsdsa das pfdkgokfsdo gkofsk gsfopg ksokf sdkfd kspf ksdpfk psdkf psdkf psdfk psdkfp skf psdkfp skfpk dpfks pdfksdpfk spdfdk spdfk psdkf psdk fpskdf psdkf pskdf pksd pfksdfp ksdpf ksdpf kspd fksdpk fpsdk fspdfk psdkf spdk f</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="notificatins_menu_msg">
+				<div class="notification_header">
+					<h1 class="notification_header_text">Header of nt 2</h1>
+					<div class="detail_opener" onClick="openDetail(2)"><i class="fa-regular fa-sort-down down_arrow_fav_opener" id="down_arrow_fav_opener_2"></i><p class="detail_opener_text">See the detail</p></div>
+				</div>
+				<div class="notification_content_container" id="notifi_cont_2">
+					<div class="notification_content">
+						<div class="notification_content_fav_cont">
+							<i class="fa-regular fa-arrow-turn-down-right"> </i>
+						</div>
+						<div class="notification_content_text_cont">
+							<p class="notification_content_text">example of a notification 2  sdasdasd asddasasdasa dsadsadsdsa das pfdkgokfsdo gkofsk gsfopg ksokf sdkfd kspf ksdpfk psdkf psdkf psdfk psdkfp skf psdkfp skfpk dpfks pdfksdpfk spdfdk spdfk psdkf psdk fpskdf psdkf pskdf pksd pfksdfp ksdpf ksdpf kspd fksdpk fpsdk fspdfk psdkf spdk f</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="notificatins_menu_msg">
+				<div class="notification_header">
+					<h1 class="notification_header_text">Header of nt 3</h1>
+					<div class="detail_opener" onClick="openDetail(3)"><i class="fa-regular fa-sort-down down_arrow_fav_opener" id="down_arrow_fav_opener_3"></i><p class="detail_opener_text">See the detail</p></div>
+				</div>
+				<div class="notification_content_container" id="notifi_cont_3">
+					<div class="notification_content">
+						<div class="notification_content_fav_cont">
+							<i class="fa-regular fa-arrow-turn-down-right"> </i>
+						</div>
+						<div class="notification_content_text_cont">
+							<p class="notification_content_text">example of a notification 3  sdasdasd asddasasdasa dsadsadsdsa das pfdkgokfsdo gkofsk gsfopg ksokf sdkfd kspf ksdpfk psdkf psdkf psdfk psdkfp skf psdkfp skfpk dpfks pdfksdpfk spdfdk spdfk psdkf psdk fpskdf psdkf pskdf pksd pfksdfp ksdpf ksdpf kspd fksdpk fpsdk fspdfk psdkf spdk f</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="choose_country">
+	
+</div>
+
+<!--<div class="top_button"><i class="fa fa-arrow-circle-up" style="font-size:60px; color: white; padding-left: 4px;"></i></div>-->
+
+<div class="main_div">
+
+<div class="photo_part">
+
+
+
+<div class="all_photos">
+<img class="photos top" src="http://css3.bradshawenterprises.com/images/Rainbow%20Worm.jpg" alt="photo" id="photo_1"/>
+<img class="photos" src="http://css3.bradshawenterprises.com/images/Birdman.jpg" alt="photo" id="photo_2" />
+<img class="photos" src="http://css3.bradshawenterprises.com/images/Turtle.jpg" alt="photo" id="photo_3" />
+<img class="photos" src="http://css3.bradshawenterprises.com/images/Windows%20Logo.jpg" alt="photo" id="photo_4" />
+<img class="photos" src="Cornish-beach_v2.jpg" alt="photo" id="photo_5" />
+<img class="photos" src="https://lh3.googleusercontent.com/0vGEh4qTRhNQxb_NWTzK2usX772-ol_cdI2d-lmjuAnJdUsLI3StbmI7vj7Lr7LdFRAFsDAW3eXJfHK7OSPJqc-ctM4y7raORTc0PXDQ5pqkA87UxhIsJHgCvap-hAKSwj1HaL79rgGSzv-EBjoKyqI9lkKWxI-Q1U0AhLgZbVnkv0lMXJ6elTJUyuwtbPUfH2-AqWTNOWMDaJAXtFHV_-Tbt6UMWHAinoA6vXrPSIYhmWb1e93qFjUpjkM2XFIj2Ye49DY5bmv4ZatYiwQmIZ1WjwHmka4_IlFjTtUVv9Tmn4pIpAP3oxqtBiVLKstgPfCc5t0w7YsWUWzmXzB7jLXqEO9i5pLDHanDT_a__yEb1MGCoZWx17soNQy5vqk05gw1wbeTBNJ4j7aSp2YrGcdpT5sx6pBu2Gxx78_dD7SNAG6M0Qmk45pNPQ-c4ZhVkpHY0AFnj9Rbqpw62meOajxFjdb7plgoVHT0gNNuCEzSSQbXyWUPZaG9y_z95blzj_nB_oJj5psTIfreJ96MfwMlHBEn7RMQrxj5dyGbEOOX4uipQwzZNnVgiP_fLYuLIiyTeVmYWyx1ZfCKrGf_jzDQRuOvYeVCq_1j-7kjFilIfuywz44n7sbBDRctXZdUOixbFQaFGrkEX-yMDh6LS3qUKVDo0Dp_X3Wcm6Mn4EJ33e0FLp5dcGhY6hsWQdiGwHsrrbRw_dtiy7SJdnqbyqi7=w1292-h969-no?authuser=0" alt="photo" id="photo_6" />
+<img class="photos" src="" alt="photo" id="photo_7" />
+<img class="photos" src="" alt="photo" id="photo_8" />
+
+
+</div>
+
+<div class="all_trans_buttons_cont">
+	<div class="trans_button_cont">
+		<div class="trans_button left" onclick="transLeft()">
+		<i class="fa-regular fa-sort-down imgClick left_arrow_trans"></i>
+		</div>
+	</div>
+
+	<div class="trans_button_cont">
+		<div class="trans_button right" onclick="transRight()">
+			<i class="fa-regular fa-sort-down imgClick right_arrow_trans"></i>
+		</div>
+	</div>
+</div>
+
+
+<div class="pause_button"><i class="fa-solid fa-circle-pause" id="pause_button_bottom"></i></div>
+
+
+<div class="img_slogan noselect">
+<div class="img_slogan_container">
+<!--<p class="small_slogan_text">AdvertIsement</p>
+<p class="small_slogan_text">ConsultIng</p>
+<p class="small_slogan_text">Web desIgn and maIntenance servIces</p>-->
+<p class="big_slogan_text">ERKAN INC.</p>
+</div>
+</div>
+
+<div class="transition_sign">
+<div class="transition_sign_cont">
+
+<div class="trans_click selected" onclick="transImg(1)" id="transClick_1"></div>
+<div class="trans_click" onclick="transImg(2)" id="transClick_2"></div>
+<div class="trans_click" onclick="transImg(3)" id="transClick_3"></div>
+<div class="trans_click" onclick="transImg(4)" id="transClick_4"></div>
+<div class="trans_click" onclick="transImg(5)" id="transClick_5"></div>
+<div class="trans_click" onclick="transImg(6)" id="transClick_6"></div>
+<div class="trans_click" onclick="transImg(7)" id="transClick_7"></div>
+<div class="trans_click" onclick="transImg(8)" id="transClick_8"></div>
+
+
+</div>
+</div>
+
+
+</div>
+
+<div class="container_0">
+	<div class="container_0_cont">
+		<div class="container_0_cont_1">
+			<div class="container_0_text_area">
+				<p class="c0_upper_text_1" id="upper_txt">ThIs Is a text area</p>
+				<h1 class="c0_upper_text_1" id="upper_txt">ThIs Is a text area too</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container_1_cont">
+	<div class="container_1">
+	<div class="container_1_text_part">
+		<div class="container_1_text_part_sec">
+			<div class="container_1_text_part_cont_1">
+		
+				<div class="c1_main_text_div">
+		
+					<p class="c1_main_text_1" id="upper_txt">anneni çok seviyorum.</p>
+				</div>
+				<div class="c1_main_text_div">
+					<h1 class="c1_main_text_2 main_text_header">
+						<span class="c1_cont_text_1 c_cont_text">anneni</span>
+						<span class="c1_cont_text_2 c_cont_text">çok</span>
+						<span class="c1_cont_text_3 c_cont_text">çok</span>
+						<span class="c1_cont_text_4 c_cont_text">seviyorum.</span>
+					</h1>
+				</div>
+				<div class="button_part">
+					<button class="button_1_dis" id="cont_1_button">Click Me</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="container_1_image_part_cont">
+			<div class="container_1_image_part">
+				<img class="container_1s_image" src="files/MicrosoftTeams-image-30.png" alt="photo" id="" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container_2">
+	<div class="container_2_cont">
+		
+		<div class="container_2_image_part">
+			<div class="container_2_image_part_cont">
+				<img class="container_2s_image" src="sunset_img.jpg" alt="photo" id="" />
+			</div>
+		</div>
+		<div class="container_2_text_part">
+			<div class="container_2_text_part_cont">
+				<div class="container_2_text_part_cont_2">
+					<div class="c2_main_text_div">
+		
+						<p class="c2_main_text_1" id="upper_txt">anneni çok seviyorum.</p>
+					</div>
+					<div class="c2_main_text_div">
+						<h1 class="c2_main_text_2 main_text_header">
+							<span class="c2_cont_text_1 c_cont_text">anneni</span>
+							<span class="c2_cont_text_2 c_cont_text">çok</span>
+							<span class="c2_cont_text_3 c_cont_text">çok</span>
+							<span class="c2_cont_text_4 c_cont_text">seviyorum.</span>
+						</h1>
+					</div>
+					<div class="button_part">
+						<button class="button_1_dis" id="cont_2_button">Click Me</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="product_background_gradient">
+<h1 align="center" class="product_top_header">Top Sellıng Products</h1>
+<div class="product_card">
+<img class="product_img" src="https://www.w3schools.com/w3images/jeans3.jpg" alt="" />
+<p align="center" class="product_header">leather Boots</p>
+<p class="product_text" align="center">This is same sort of text about the product</p>
+
+<div class="buttons">
+  <div class="container">
+      <a href="https://www.google.com/" class="btn effect01" target="_blank"><span>Add to card!</span></a>
+  </div>
+</div>
+</div>
+
+<div class="product_card">
+<img class="product_img" src="https://www.w3schools.com/w3images/jeans3.jpg" alt="" />
+<p align="center" class="product_header">leather Boots</p>
+<p class="product_text" align="center">This is same sort of text about the product</p>
+
+<div class="buttons">
+  <div class="container">
+      <a href="https://www.google.com/" class="btn effect01" target="_blank"><span>Add to card!</span></a>
+  </div>
+</div>
+</div>
+
+<div class="product_card">
+<img class="product_img" src="https://www.w3schools.com/w3images/jeans3.jpg" alt="" />
+<p align="center" class="product_header">leather Boots</p>
+<p class="product_text" align="center">This is same sort of text about the product</p>
+
+<div class="buttons">
+  <div class="container">
+      <a href="https://www.google.com/" class="btn effect01" target="_blank"><span>Add to card!</span></a>
+  </div>
+</div>
+</div>
+
+<div class="product_card">
+<img class="product_img" src="https://www.w3schools.com/w3images/jeans3.jpg" alt="" />
+<p align="center" class="product_header">leather Boots</p>
+<p class="product_text" align="center">This is same sort of text about the product</p>
+
+<div class="buttons">
+  <div class="container">
+      <a href="https://www.google.com/" class="btn effect01" target="_blank"><span>Add to card!</span></a>
+  </div>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+<div class="contect_part">
+<div class="contect_part_cont">
+<div class="contect_part_cont_2">
+
+
+<div class="social_media">
+<h1 class="contect_social_header">Social Media</h1>
+<div class="wrapper social_media_part">
+
+  <div class="icon facebook">
+    <div class="tooltip">Facebook</div>
+    <span><i class="fa-brands fa-facebook"></i></span>
+  </div>
+  <div class="icon twitter">
+    <div class="tooltip">Twitter</div>
+    <span><i class="fa-brands fa-twitter"></i></span>
+  </div>
+  <div class="icon instagram">
+    <div class="tooltip">Instagram</div>
+    <span><i class="fa-brands fa-instagram"></i></span>
+  </div>
+  <div class="icon telegram">
+    <div class="tooltip">Telegram</div>
+    <span><i class="fa-brands fa-telegram"></i></span>
+  </div>
+  <div class="icon youtube">
+    <div class="tooltip">YouTube</div>
+    <span><i class="fa-brands fa-youtube"></i></span>
+  </div>
+</div>
+<!--<div class="mapouter"><div class="gmap_canvas"><iframe title="Google Maps" class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=pinaldi&amp;t=k&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div><style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:400px!important;}</style></div>
+<iframe title="" class="YouTube_video noselect" width="480" height="270" src="https://www.youtube.com/embed/oo3SvcydIJ0?start=1000controls=1"frameborder="0" 
+allowfullscreen>
+</iframe>
+advertisement 
+consaltincy
+website
+-->
+</div>
+</div>
+</div>
+</div>
+<div class="copywrite_part">
+<p class="copywrite_text">This WebSites all rights reserved by Ali Erkan©®™ Inc.</p>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
