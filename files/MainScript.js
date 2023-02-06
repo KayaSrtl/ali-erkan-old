@@ -1,3 +1,4 @@
+//Copyright 2023 Kaya Sertel. All Rights Reserved.
 var transNum = 1;
 var animation_on_going = true;
 var click_count = 0;
