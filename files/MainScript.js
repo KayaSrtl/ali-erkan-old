@@ -70,6 +70,8 @@ $( document ).ready(function() {
 		
 		isNotifiOpen = !isNotifiOpen;
 	});
+	$(".choose_country").fadeOut(250); //SONRA SİL ÇOK ÖNEMLİ
+			$(".close_country").fadeOut(250); //SONRA SİL ÇOK ÖNEMLİ
 	var isCountryOpen = true;
 		$('.close_button_img, .close_country, .country_choose').click(function() {
 		if (isCountryOpen) {
@@ -215,17 +217,28 @@ $( document ).ready(function() {
 	//var file_count = <?php echo $file_count ?>;
 
 	//alert('File count in folder ' + dir + ' is ' + file_count);
-	
+	/*
 	$(".icon.youtube").on('click', function(){
 		window.open('https://www.youtube.com/channel/UCBKk4Cv_tXeIh1co755xSzQ', '_blank');
 	});
 	$(".icon.instagram").on('click', function(){
 		window.open('https://www.instagram.com/laquillas_ladyshirt/', '_blank');
+	});*/
+	
+	
+	$(".icon.whatsapp").on('click', function(){
+		window.open('https://wa.me/447541962061', '_blank');
 	});
+	
+	$(".icon.map.UK").on('click', function(){
+		window.open('https://www.google.com/maps/place/43+Prusom+St,+London+E1W+3RB,+Birle%C5%9Fik+Krall%C4%B1k/@51.5068,-0.0553,17z/data=!4m5!3m4!1s0x4876032f037bb8ab:0xdb02982fa890124b!8m2!3d51.5068143!4d-0.0551441?hl=en', '_blank');
+	});
+	
 });
 
 var lastScrollTop = 0;
 var menu_state = true;
+
 $(window).scroll(function(event){
 	if (is_scrolling_locked_menu_nav || is_scrolling_locked_notifi) {
 		$(window).scrollTop(lastScrollTop_stop_scroll);
@@ -417,7 +430,7 @@ function beReadyPage () {
 	//$(".trans_button").css("top", window_height/2);
 	$(".trans_div").css("height", window_height);
 	$(".trans_div").css("width", window_width);
-	$(".photos").css("width", window_width);
+	//$(".photos").css("width", window_width);
 	$(".photos").css("height", window_height+4);
 	
 	$(".container_1").css("height", window_height);
@@ -447,7 +460,7 @@ function beReadyPage () {
 	$(".container_2_text_part").css("padding-left", window_width/2-parseInt($( ".container_2_text_part" ).css('width')));
 	$(".top_part_logo").css("padding-left", parseInt($(".contect").css('width')) - parseInt($(".microphone_button_top_a").css('width')));
 	
-	
+	/*
 	var total_product_card_in_line;
 	var one_card_width = parseInt($( ".product_card" ).width() + parseInt($(".transition_sign").outerHeight() - $(".transition_sign").innerHeight()));
 	var one_card_height = parseInt($( ".product_card" ).height() + parseInt($(".transition_sign").outerHeight() - $(".transition_sign").innerHeight()));
@@ -461,8 +474,8 @@ function beReadyPage () {
 	} else {
 		total_product_card_in_line = 1;
 	}
-	
-
+	*/
+/*
 	if(window_width > 1000) {
 		//$(".fixed_menu a").css("font-size", 25);
 		//$(".fixed_menu a").css("padding", 20);
@@ -492,7 +505,7 @@ function beReadyPage () {
 		//$(".fixed_menu_container").css("margin-right", 25);
 		//$(".search_part_a").css("display", "none");
 		
-	}
+	}*/
 	
 		/*	.container_1_text_part_cont_1 {
 	display: flex;
@@ -621,52 +634,67 @@ function beReadyPage () {
 			$(".navicon_button_click").removeClass('navi_change');
 		}
 	}
-	
+	/*
 	if(window_width > 1700) {
-		$(".contect_part").css("height", 440);
-		$(".YouTube_video").css("padding-left", (window_width - $(".YouTube_video").width())/2);
-		$(".YouTube_video").css("margin-top", -500);
-		$(".YouTube_video").css("padding-bottom", 90);
-		$(".YouTube_video").css("top", 0);
-		$(".social_media_part").css("margin-right", 70);
-		$(".social_media_part").css("padding-bottom", 0);
-		$(".contect_social_header").css("text-align", "right");
-		$(".contect_social_header").css("margin-right", 85);
-		$(".mapouter").css("margin-left", 10);
-		$(".mapouter").css("top", 0);
+		//$(".contect_part").css("height", 440);
+		//$(".YouTube_video").css("padding-left", (window_width - $(".YouTube_video").width())/2);
+		//$(".YouTube_video").css("margin-top", -500);
+		//$(".YouTube_video").css("padding-bottom", 90);
+		//$(".YouTube_video").css("top", 0);
+		//$(".social_media_part").css("margin-right", 70);
+		//$(".social_media_part").css("padding-bottom", 0);
+		//$(".contect_social_header").css("text-align", "right");
+		//$(".contect_social_header").css("margin-right", 85);
+		//$(".mapouter").css("margin-left", 10);
+		//$(".mapouter").css("top", 0);
 		
 	} else if(window_width > 1200) {
-		$(".contect_part").css("height", 520);
-		$(".YouTube_video").css("padding-left", window_width - $(".YouTube_video").width() - 70);
-		$(".YouTube_video").css("margin-top", -1100);
-		$(".YouTube_video").css("padding-bottom", 0);
-		$(".YouTube_video").css("top", 60);
-		$(".social_media_part").css("margin-right", 70);
-		$(".social_media_part").css("padding-bottom", 0);
-		$(".contect_social_header").css("text-align", "right");
-		$(".contect_social_header").css("margin-right", 85);
-		$(".mapouter").css("margin-left", 10);
-		$(".mapouter").css("top", 45);
+		//$(".contect_part").css("height", 520);
+		//$(".YouTube_video").css("padding-left", window_width - $(".YouTube_video").width() - 70);
+		//$(".YouTube_video").css("margin-top", -1100);
+		//$(".YouTube_video").css("padding-bottom", 0);
+		//$(".YouTube_video").css("top", 60);
+		//$(".social_media_part").css("margin-right", 70);
+		//$(".social_media_part").css("padding-bottom", 0);
+		//$(".contect_social_header").css("text-align", "right");
+		//$(".contect_social_header").css("margin-right", 85);
+		//$(".mapouter").css("margin-left", 10);
+		//$(".mapouter").css("top", 45);
 	} else {
-		$(".contect_part").css("height", 950);
-		$(".YouTube_video").css("padding-left", (window_width - $(".YouTube_video").width())/2);
-		$(".YouTube_video").css("margin-top", 220);
-		$(".YouTube_video").css("padding-bottom", 0);
-		$(".YouTube_video").css("top", 0);
-		$(".social_media_part").css("margin-right", (window_width - $( ".social_media_part" ).width())/2);
-		$(".social_media_part").css("padding-bottom", 20);
-		$(".contect_social_header").css("text-align", "center");
-		$(".contect_social_header").css("margin-right", 0);
-		$(".mapouter").css("margin-left", (window_width - $( ".mapouter" ).width())/2);
-		$(".mapouter").css("top", 0);
-	}
-	
+		//$(".contect_part").css("height", 950);
+		//$(".YouTube_video").css("padding-left", (window_width - $(".YouTube_video").width())/2);
+		//$(".YouTube_video").css("margin-top", 220);
+		//$(".YouTube_video").css("padding-bottom", 0);
+		//$(".YouTube_video").css("top", 0);
+		//$(".social_media_part").css("margin-right", (window_width - $( ".social_media_part" ).width())/2);
+		//$(".social_media_part").css("padding-bottom", 20);
+		//$(".contect_social_header").css("text-align", "center");
+		//$(".contect_social_header").css("margin-right", 0);
+		//$(".mapouter").css("margin-left", (window_width - $( ".mapouter" ).width())/2);
+		//$(".mapouter").css("top", 0);
+	} */
+	/*
 	$(".product_card").css("left", (window_width - (total_product_card_in_line * one_card_width + (total_product_card_in_line+1)*parseInt($( ".product_card" ).css('margin-left'))))/2);
 	
 	//var total_card_height = 1;
 	var total_card_height = (parseInt(total_product_card/total_product_card_in_line) < total_product_card/total_product_card_in_line) ? (total_product_card/total_product_card_in_line+1) : (total_product_card/total_product_card_in_line);
 	$(".product_background_gradient").css("height", parseInt($( ".product_top_header" ).height()) + parseInt($( ".product_top_header" ).css('padding-top')) + (parseInt($( ".product_card" ).css('margin-top')) + parseInt($( ".product_card" ).height()))*total_card_height + 100);
+	*/
 	
+	if(window_width < 620) { 
+		$(".mapouter").css("width", window_width - 20);
+		$(".gmap_iframe").css("width", window_width - 20);
+		$(".gmap_canvas").css("width", window_width - 20);
+		document.getElementById('map1').style.width = ((window_width - 20) + "px");
+		document.getElementById('map2').style.width = ((window_width - 20) + "px");
+	} else {
+		$(".mapouter").css("width", 600);
+		$(".gmap_iframe").css("width", 600);
+		$(".gmap_canvas").css("width", 600);
+		document.getElementById('map1').style.width = '600px';
+		document.getElementById('map2').style.width = '600px';
+	}
+		
 	
 }
 
