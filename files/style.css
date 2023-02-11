@@ -9,6 +9,11 @@ body {
 	overflow-x: hidden;
 }
 
+html body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
 /*@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");*/
 
 /* width */
@@ -39,7 +44,30 @@ body {
 	background: #555; 
 }
 
+#slider {
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  position: relative;
+}
 
+#slider-image {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#slider-text {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
 
 .wrapper {
 	
@@ -81,6 +109,8 @@ body {
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+
+
 
 .wrapper .tooltip::before {
   position: absolute;
@@ -212,13 +242,18 @@ background-position: 20%;
 
 
 .choose_country_cont_2 { 
-	display: block;
 	padding: 30px;
+}
+
+.choose_country_cont_1 { 
+	display: block;
+	margin: 15px;
 	background: black;
 	border-radius: 20px;
 	position: relative;
 	z-index: 10;
 }
+
 .choose_country_cont_3 { 
 
 	display: flex;
@@ -863,9 +898,8 @@ input[type="text"] {
 	bottom: 10px;
 	right: 10px;
 	cursor: pointer;
-	display: block;
+	display: none;
 	z-index: 10;
-	
 }
 
 .contect a {
@@ -991,6 +1025,7 @@ input[type="text"] {
 .main_div  {
 	left: 0px;
 	width: 100%;
+	overflow-x: hidden;
 }
 
 .photo_part {
