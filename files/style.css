@@ -219,7 +219,7 @@ background-position: 20%;
 }
 
 .choose_country {
-	display: block;
+	display: none;
 	position: fixed;
 	width: 100%;
 	z-index: 200;
