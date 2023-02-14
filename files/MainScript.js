@@ -504,7 +504,7 @@ $(window).scroll(function (event) {
 	function chechLang() {
 		let language = getCookie("language");
 		if (language != "") {
-			alert("You choose " + language);
+			//alert("You choose " + language);
 		} else {
 			$(".choose_country").fadeIn(250);
 			$(".close_country").fadeIn(250);
