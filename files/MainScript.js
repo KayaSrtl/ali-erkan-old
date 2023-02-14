@@ -28,7 +28,7 @@ var is_mobile_phone = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Oper
 
 
 
-$( document ).ready(function() { 
+$( document ).ready(function() {
 	//do something after document all loaded
 	
 	$( ".trans_click" ).hover(function() {
@@ -84,9 +84,19 @@ $( document ).ready(function() {
 		
 		isNotifiOpen = !isNotifiOpen;
 	});
-	var isCountryOpen = true;
+	
 		$('.close_button_img, .close_country, .country_choose').click(function() {
-		if (isCountryOpen) {
+			if($(this).is('#country_1_button')) { //UK
+				setCookie("language", "UK");
+			}
+			if($(this).is('#country_2_button')) { //Europe
+				setCookie("language", "Europe");
+			}
+			
+			$(".choose_country").fadeOut(250);
+			$(".close_country").fadeOut(250);
+			is_scrolling_locked_notifi = false;
+		/*if (isCountryOpen) {
 			$(".choose_country").fadeOut(250);
 			$(".close_country").fadeOut(250);
 			is_scrolling_locked_notifi = false;
@@ -96,9 +106,7 @@ $( document ).ready(function() {
 			$(".close_country").fadeIn(250);
 			is_scrolling_locked_notifi = true;
 			lastScrollTop_stop_scroll = $(window).scrollTop();
-		}
-		
-		isCountryOpen = !isCountryOpen;
+		}*/
 	});
 	
 	$('.pause_button').click(function() {
@@ -172,6 +180,8 @@ $( document ).ready(function() {
 		}
 	});*/
 	
+
+	
 	$(document).keydown(function(e){
 		//e.preventDefault();
 		var key = e.which;
@@ -225,6 +235,8 @@ $( document ).ready(function() {
 	}*/
 	
 	beReadyPage();
+	
+	chechLang();
 	//var dir = <?php echo $dir ?>;
 	//var file_count = <?php echo $file_count ?>;
 
@@ -374,6 +386,8 @@ $(window).scroll(function(event){
 	lastScrollTop = st;
 });
 
+
+
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
   // Create an array of slides
@@ -466,6 +480,38 @@ $(window).scroll(function (event) {
 	}
 	
 });*/
+
+	function setCookie(cname,cvalue) {
+		document.cookie = cname + "=" + cvalue + ";path=/";
+	}
+	
+	function getCookie(cname) {
+		let name = cname + "=";
+		let decodedCookie = decodeURIComponent(document.cookie);
+		let ca = decodedCookie.split(';');
+		for(let i = 0; i < ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+	
+	function chechLang() {
+		let language = getCookie("language");
+		if (language != "") {
+			alert("You choose " + language);
+		} else {
+			$(".choose_country").fadeIn(250);
+			$(".close_country").fadeIn(250);
+			is_scrolling_locked_notifi = true;
+			lastScrollTop_stop_scroll = $(window).scrollTop();
+		}
+	}
 
 function openDetail(notifiNum) {
 	var notifiElementID = "#notifi_cont_";
