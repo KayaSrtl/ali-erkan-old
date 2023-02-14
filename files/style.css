@@ -699,7 +699,7 @@ background-position: 20%;
 }
 
 .menu_contact {
-	display: none;
+	display: block;
 	position: fixed;
 	width: 370px;
 	z-index: 100;
