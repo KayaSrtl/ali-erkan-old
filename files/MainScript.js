@@ -24,12 +24,17 @@ var ofsets_scroll = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var window_height;
 var window_width;
 var is_mobile_phone = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) ? true : false;
+var mySwiper;
 //http://css3.bradshawenterprises.com/cfimg/#cfimg1
 
-
+mySwiper = new Swiper('.swiper-container');
 
 $( document ).ready(function() {
 	//do something after document all loaded
+	
+	
+	
+	//mySwiper.slideTo(5);
 	
 	$( ".trans_click" ).hover(function() {
 		if(!$(this).hasClass('selected'))
@@ -236,7 +241,11 @@ $( document ).ready(function() {
 	
 	beReadyPage();
 	
-	chechLang();
+	//chechLang(); DON'T FORGET TO CHANGE THIS
+	
+	
+	
+	
 	//var dir = <?php echo $dir ?>;
 	//var file_count = <?php echo $file_count ?>;
 
@@ -358,10 +367,14 @@ $(window).scroll(function(event){
 	}
 	
 	if (!is_mobile_phone && (st > parseInt($( ".container_0" ).height())+window_height) && (parseInt($( ".container_0" ).height())+window_height*4 > st))  {
+		
 		var temp = Math.round(window_height + (st - window_height - parseInt($( ".container_0" ).height()))*(150.0/(window_height*2)));
 		//$(".container_2s_image").animate({height: (window_height + (st - window_height - parseInt($( ".container_0" ).height()))*(150.0/(window_height*2)))}, 3);
 		if (temp_container_2s_image != temp)
-			$(".container_2s_image").css("height", temp);
+			$(".container_2s_image").css('transform', 'translate3d(0px, ' + ((st)*(150.0/($('.container_2s_image').offset().top))-150) + 'px, 0px)');
+			//$(".container_2s_image").css("height", temp);
+			//$('.container_2s_image').offset().top - window_height
+			//
 	}
 
 
@@ -838,6 +851,8 @@ function beReadyPage () {
 	$(".product_background_gradient").css("height", parseInt($( ".product_top_header" ).height()) + parseInt($( ".product_top_header" ).css('padding-top')) + (parseInt($( ".product_card" ).css('margin-top')) + parseInt($( ".product_card" ).height()))*total_card_height + 100);
 	*/
 	
+	$(".swiper_cont").css("height", window_height);
+	
 	if(window_width < 620) { 
 		$(".mapouter").css("width", window_width - 20);
 		$(".gmap_iframe").css("width", window_width - 20);
@@ -855,19 +870,26 @@ function beReadyPage () {
 	
 }
 
+mySwiper.slideTo(5);
+
 function transLeft() {
-	if(transNum == 1) 
+	if(transNum == 1) {
 		transImg(8)
-	 else 
+	} else {
 		transImg(transNum - 1);
+		mySwiper.slidePrev();
+	}
 	is_trans_button_clicked = true;
 }
 
 function transRight() {
-	if(transNum == 8)
+	if(transNum == 8) {
 		transImg(1)
-	 else 
+	} else {
 		transImg(transNum + 1);
+		mySwiper.slideNext();
+	}
+	
 	is_trans_button_clicked = true;
 }
 
