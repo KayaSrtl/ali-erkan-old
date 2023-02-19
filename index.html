@@ -63,12 +63,18 @@
 <div class="main_noscript_div">
 <h1 class="noscript_header">JavaScript Error</h1>
 <h3 class="noscript_text">It looks like JavaScript closed or not supported in your browser</h3>
-<form target="_blank" action="http://www.tizag.com/javascriptT/javascript-enable.php"><button class="noscript_button">click for help!</button></form>
+<form target="_blank" action="https://support.google.com/adsense/answer/12654?hl=en"><button class="noscript_button">click for help!</button></form>
 </div>
 <div class="cover_page"></div>
 </noscript>
 <link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible|Bebas Neue|Montserrat' rel='stylesheet'>
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!-- Add the Swiper library -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Add the Swiper styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--<script src="https://kit.fontawesome.com/1677a5edf1.js" crossorigin="anonymous"></script>-->
 <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css" crossorigin="anonymous">
@@ -245,8 +251,26 @@
 </div>
 
 
+<div class="swiper-container noselect swiper_cont">
+<div class="swiper-wrapper">
+	<div class="swiper-slide"><h1>1</h1></div>
+	<div class="swiper-slide"><h1>2</h1></div>
+	<div class="swiper-slide"><h1>3</h1></div>
+	<div class="swiper-slide"><h1>4</h1></div>
+	<div class="swiper-slide"><h1>5</h1></div>
+	<div class="swiper-slide"><h1>6</h1></div>
+	<div class="swiper-slide"><h1>7</h1></div>
+	<div class="swiper-slide"><h1>8</h1></div>
+</div>
+</div>
 
-<!--<div class="top_button"><i class="fa fa-arrow-circle-up" style="font-size:60px; color: white; padding-left: 4px;"></i></div>-->
+<script>
+var mySwiper = new Swiper('.swiper-container');
+
+
+</script>
+
+<!--<div class="top_button"><i class="fa fa-arrow-circle-up" style="font-size: 60px; color: white; padding-left: 4px;"></i></div>-->
 
 <div class="main_div">
 
@@ -508,6 +532,11 @@ website
 <div class="copywrite_part">
 <p class="copywrite_text">This WebSites all rights reserved by Ali Erkan©®™ Inc.</p>
 </div>
+
+
+
+
+
 
 <div id="slider">
   <img id="slider-image" src="slide1.jpg">
