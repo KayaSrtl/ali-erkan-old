@@ -218,6 +218,17 @@ background-position: 20%;
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+
+.swiper_cont {
+	position: absolute;
+	z-index:6;
+	color: black;
+	width: 100%;
+	height: 300px; 
+	text-align: center;
+	cursor: grab;
+}
+
 .choose_country {
 	display: none;
 	position: fixed;
@@ -1115,7 +1126,7 @@ input[type="text"] {
 .trans_button {
 	border-radius: 20%;
 	top: 250px;
-	z-index: 2;
+	z-index: 7;
 }
 
 .trans_button.right {
@@ -1133,6 +1144,7 @@ input[type="text"] {
 
 
 .all_trans_buttons_cont {
+	z-index: 8;
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
@@ -1145,7 +1157,7 @@ input[type="text"] {
 	top: 733px;
 	left:50%;
 	float: right;
-	z-index: 2;
+	z-index: 7;
 	/*border: 2px solid black;*/
 	border-radius: 8px;
 	
@@ -1326,6 +1338,7 @@ input[type="text"] {
 }
 
 .container_1_image_part {
+	overflow: hidden;
 	float: left;
 	color: black;
 	width: 50%;
@@ -1353,7 +1366,6 @@ input[type="text"] {
 
 .container_2_image_part {
 	position: absolute;
-	background: red;
 	width: 100%;
 	height: 700px;
 }
@@ -1374,11 +1386,15 @@ input[type="text"] {
 }
 
 .container_2s_image {
-	position: absolute;
+	position: relative;
 	object-fit: cover;
 	overflow-clip-margin: content-box;
     overflow: clip;
 	z-index: 2;
+}
+
+.container_2_image_part_cont {
+	overflow: hidden;
 }
 
 .container_1s_image {
@@ -1401,6 +1417,8 @@ input[type="text"] {
 
 .container_2_cont {
 	position: relative;
+	width: 100vw;
+    height: 100vh;
 }
 
 .button_1_dis {
