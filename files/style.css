@@ -656,9 +656,7 @@ background-position: 20%;
 	animation: button_background_hover_ani 0.5s ease-in-out;
 	background: rgba(41, 41, 41, 0.2);
 }
-.transition_sign_cont {
-	width: fit-content;
-}
+
 
 
 .category {
@@ -1044,16 +1042,16 @@ input[type="text"] {
 	opacity: 1;
 	top: 0px;
 	padding-top: 0px;
-	width: 100%;
-	height: 100%;
+	width: calc(100vw - 14.5px);
+	height: 100vh;
 	position: relative;
 }
 
 .all_photos {
 	float: rigth;
 	top: 45;
-	width: 100%; 
-	height: 100%;
+	width: calc(100vw - 14.5px);
+	height: 100vh;
 	background-color: white;
 	position:absolute;
 	z-index: 1;
@@ -1086,7 +1084,7 @@ input[type="text"] {
 .img_slogan {
 	position: absolute;
 	z-index: 2;
-	width: 100%;
+	width: calc(100vw - 14.5px);
 }
 
 .img_slogan_container {
@@ -1153,14 +1151,22 @@ input[type="text"] {
 .transition_sign {
 	height: 45px;
 	background-color: none;
-	position: absolute;
-	top: 733px;
-	left:50%;
+	position: relative;
+	top: -40px;
+	width: calc(100vw - 14.5px);
+	left: -14.5px;
 	float: right;
 	z-index: 7;
 	/*border: 2px solid black;*/
 	border-radius: 8px;
+	display: flex;
+	justify-content: center;
 	
+}
+
+.transition_sign_cont {
+	width: fit-content;
+	display: flex;
 }
 
 .trans_click {
