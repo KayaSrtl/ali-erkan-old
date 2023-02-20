@@ -3,11 +3,12 @@
 YAPILACAKLAR LİSTESİ
 
 
-1- ÇEREZ TUTARAK CHOOSE COUNTRY KAPANACAK
+1- ÇEREZ TUTARAK CHOOSE COUNTRY KAPANACAK(YAPILDI)
 CHOOSE COUNTRY E GÖRE GOOGLE MAP SAYFASI AÇILACAK
-2- TELEFONDA ÜSTTEKİ FOTOĞRAFLAR ELLE KAYDIRMALI OLACAK
+2- TELEFONDA ÜSTTEKİ FOTOĞRAFLAR ELLE KAYDIRMALI OLACAK(YAPILDI)
 
-
+geliştirme için değişirilen şeyler
+//chechLang(); DON'T FORGET TO CHANGE THIS
 */
 var transNum = 1;
 var animation_on_going = true;
@@ -24,15 +25,58 @@ var ofsets_scroll = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var window_height;
 var window_width;
 var is_mobile_phone = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) ? true : false;
-var mySwiper;
+var swiper_animation_finished = false;
 //http://css3.bradshawenterprises.com/cfimg/#cfimg1
 
-mySwiper = new Swiper('.swiper-container');
+
 
 $( document ).ready(function() {
 	//do something after document all loaded
+		var mySwiper = new Swiper('.swiper-container', {
+	on: {
+			slideNextTransitionEnd: (swiper) => {
+				console.log('SWIPED RIGHT');
+				mySwiper.slideTo(1);
+				if(swiper_animation_finished) {
+					transRight();
+					swiper_animation_finished = false;
+				} else
+					swiper_animation_finished = true;
+					
+				/*if(!trans_click_pressed) {
+					if(current_active_index == mySwiper.slides.length - 1)
+						current_active_index = 0;
+					else
+						current_active_index++;
+				}
+				trans_click_pressed = false;
+				//new_active_index = current_active_index;//mySwiper.activeIndex;
+				changeTransClick(old_active_index, current_active_index);
+				old_active_index = current_active_index;*/
+			},
+			slidePrevTransitionEnd: (swiper) => {
+				console.log('SWIPED LEFT');
+				mySwiper.slideTo(1);
+				if(swiper_animation_finished) {
+					transLeft();
+					swiper_animation_finished = false;
+				} else
+					swiper_animation_finished = true;
+				/*if(!trans_click_pressed) {
+					if(current_active_index == 0)
+						current_active_index = mySwiper.slides.length - 1;
+					else
+						current_active_index--;
+				}
+				trans_click_pressed = false;
+				//new_active_index = current_active_index;//mySwiper.activeIndex;
+				changeTransClick(old_active_index, current_active_index);
+				old_active_index = current_active_index;*/
+			}
+		},
+	});
 	
-	
+	mySwiper.slideTo(1);
 	
 	//mySwiper.slideTo(5);
 	
@@ -869,14 +913,13 @@ function beReadyPage () {
 	
 }
 
-mySwiper.slideTo(5);
+
 
 function transLeft() {
 	if(transNum == 1) {
 		transImg(8)
 	} else {
 		transImg(transNum - 1);
-		mySwiper.slidePrev();
 	}
 	is_trans_button_clicked = true;
 }
@@ -886,7 +929,6 @@ function transRight() {
 		transImg(1)
 	} else {
 		transImg(transNum + 1);
-		mySwiper.slideNext();
 	}
 	
 	is_trans_button_clicked = true;
