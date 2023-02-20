@@ -672,7 +672,7 @@ background-position: 20%;
 
 .category {
 	float: left;
-    display: block;
+    display: flex;
 	position: relative;
 }
 
@@ -1193,6 +1193,7 @@ input[type="text"] {
 	font-family: Bebas Neue;
 	margin-block-start: 0em;
     margin-block-end: 0em;
+	text-align: center;
 }
 
 .c0_upper_text_header_1 {
@@ -1204,8 +1205,6 @@ input[type="text"] {
 
 .c0_upper_text_contant {
 	color: black;
-	font-size:1.2vw;
-	margin: 20px;
 }
 
 
@@ -1283,6 +1282,7 @@ input[type="text"] {
 	font-family: Montserrat;
 	font-size: 25px;
 	position: relative;
+	text-align: center;
 }
 
 .c2_main_text_1 {
@@ -1294,7 +1294,7 @@ input[type="text"] {
 .container_2_image_part {
 	position: absolute;
 	width: 100%;
-	height: 700px;
+	height: 100vh;
 }
 
 .container_2_text_part_cont_2 {
@@ -1643,6 +1643,15 @@ input[type="text"] {
 		flex-direction: column;
 		align-items: center;
 		height: 900px;
+	}	
+	
+	.c0_upper_text_contant {
+		font-size: 16px;
+		margin: 15px;
+	}
+	
+	.container_0_contant_area {
+		flex-direction: column;
 	}
 }
 
@@ -1668,6 +1677,11 @@ input[type="text"] {
 		flex-direction: column;
 		align-items: center;
 		height: 900px;
+	}	
+	
+	.c0_upper_text_contant {
+		font-size: 18px;
+		margin: 30px;
 	}
 }
 
@@ -1692,6 +1706,11 @@ input[type="text"] {
 	
 	.maps_cont {
 		height: 400px;
+	}
+	
+	.c0_upper_text_contant {
+		font-size:1.2vw;
+		margin: 20px;
 	}
 }
 
