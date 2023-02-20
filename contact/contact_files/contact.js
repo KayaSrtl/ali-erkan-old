@@ -386,12 +386,14 @@ $(window).scroll(function(event){
 	if (st > lastScrollTop){
 		if(menu_state) {
 			$(".fixed_menu").animate({top: '-90'}, 50);
-			setTimeout(function() { menu_state = false;}, 20);
+			//setTimeout(function() { menu_state = false;}, 10);
+			menu_state = false;
 		}
-	} else {
+	} else if (st < lastScrollTop){
 		if(!menu_state) {
 			$(".fixed_menu").animate({top: '0'}, 50);
-			setTimeout(function() { menu_state = true;}, 20);
+			//setTimeout(function() { menu_state = true;}, 10);
+			menu_state = true;
 			
 		}
 	}
