@@ -7,7 +7,8 @@ YAPILACAKLAR LİSTESİ
 CHOOSE COUNTRY E GÖRE GOOGLE MAP SAYFASI AÇILACAK
 2- TELEFONDA ÜSTTEKİ FOTOĞRAFLAR ELLE KAYDIRMALI OLACAK
 
-
+geliştirme için değişirilen şeyler
+//chechLang(); DON'T FORGET TO CHANGE THIS
 */
 var transNum = 1;
 var animation_on_going = true;
@@ -269,7 +270,7 @@ $( document ).ready(function() {
 	
 });
 
-var lastScrollTop = 0;
+var lastScrollTop = 1000;
 var menu_state = true;
 var is_text_visible = [false, false, false, false, false, false, false, false, false, false];
 var temp_container_2s_image = window_height;
@@ -333,8 +334,7 @@ $(window).scroll(function(event){
 		}
 		//$(".menu_button_bottom").text((st > ($('.c1_cont_text_4').offset().top - window_height + parseInt($( ".c1_cont_text_4" ).height()))));
 	}
-	if ((st > window_height + parseInt($( ".container_0" ).height())) && (parseInt($( ".container_0" ).height())+window_height*3 > st))  {
-		//var defval = parseInt($( ".container_1" ).height()) + parseInt($( ".container_0" ).height())  + parseInt($( ".c1_main_text_div" ).height()) + (parseInt($('.container_1_text_part_cont_1').innerWidth()) - parseInt($('.container_1_text_part_sec').width()));
+	if (st > $('.container_2').offset().top - window_height && $('.container_2').offset().top + window_height > st)  {
 		if((!is_text_visible[5]) && (st > ofsets_scroll[5])) {
 			$(".c2_main_text_1").addClass('text_upper_ani');
 			$(".c2_main_text_1").css("opacity", 1);
@@ -386,12 +386,14 @@ $(window).scroll(function(event){
 	if (st > lastScrollTop){
 		if(menu_state) {
 			$(".fixed_menu").animate({top: '-90'}, 50);
-			setTimeout(function() { menu_state = false;}, 20);
+			//setTimeout(function() { menu_state = false;}, 10);
+			menu_state = false;
 		}
-	} else {
+	} else if (st < lastScrollTop){
 		if(!menu_state) {
 			$(".fixed_menu").animate({top: '0'}, 50);
-			setTimeout(function() { menu_state = true;}, 20);
+			//setTimeout(function() { menu_state = true;}, 10);
+			menu_state = true;
 			
 		}
 	}
@@ -554,23 +556,6 @@ function openDetail(notifiNum) {
 		);
 	}
 	return;
-}
-
-
-function transImg(elementNum) {
-	click_count++;
-	if(elementNum == 9) {
-		elementNum = 1;
-	}
-	if(elementNum != transNum) {
-		changePhoto(elementNum);
-		var elementID = "transClick_";
-		elementID += elementNum;
-		document.getElementById(elementID).className = "trans_click selected";
-		elementID = elementID.replace(elementNum,transNum);
-		document.getElementById(elementID).className = "trans_click";
-		transNum = elementNum;
-	}
 }
 
 var is_mini_active = false;
@@ -869,63 +854,9 @@ function beReadyPage () {
 	
 }
 
-mySwiper.slideTo(5);
-
-function transLeft() {
-	if(transNum == 1) {
-		transImg(8)
-	} else {
-		transImg(transNum - 1);
-		mySwiper.slidePrev();
-	}
-	is_trans_button_clicked = true;
-}
-
-function transRight() {
-	if(transNum == 8) {
-		transImg(1)
-	} else {
-		transImg(transNum + 1);
-		mySwiper.slideNext();
-	}
-	
-	is_trans_button_clicked = true;
-}
-
 function beReverseSign(num) {
 	num = -num;
 	return num;
-}
-
-function changePhoto(eleNum) {
-	var elementID = "photo_";
-	elementID += eleNum;
-	document.getElementById(elementID).className = "photos top";
-	elementID = elementID.replace(eleNum,transNum);
-	document.getElementById(elementID).className = "photos";
-}
-
-/*for(var i = 1; i < 100; ++i) {
-	
-	setTimeout(function() { changeImgg(); }, i*5000);
-	
-}
-
-
-
-function changeImgg() {
-	if(is_change_on_going && !is_trans_button_clicked)
-		transImg(transNum+1);
-	is_trans_button_clicked = false;
-}*/
-
-setTimeout(function() { changeImgg(); }, 5000);
-
-function changeImgg() {
-	if(is_change_on_going && !is_trans_button_clicked)
-		transImg(transNum+1);
-	is_trans_button_clicked = false;
-	setTimeout(function() { changeImgg(); }, 5000);
 }
 
 setTimeout(function() { beReadyPage();}, 200);
