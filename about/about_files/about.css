@@ -317,7 +317,7 @@ background-position: 20%;
 }
 
 
-.fixed_menu a {
+.fixed_menu a:not(.top_logo_icon) {
 	border-radius: 50px;
 	display: block;
 	color: black;
@@ -329,16 +329,28 @@ background-position: 20%;
 	cursor: pointer;
 }
 
+.top_logo_icon {
+	color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .search_part_a {
 	padding-top: 0px !important;
 	padding-bottom: 0px !important;
 	display: block;
 }
 
+.top_part_logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 
 
 @media only screen and (max-width: 350px) {
-	.fixed_menu a {
+	.fixed_menu a:not(.top_logo_icon) {
 		font-size: 13px;
 		margin: 6px 1px;
 	}
@@ -403,7 +415,7 @@ background-position: 20%;
 }
 
 @media only screen and (max-width: 600px) and (min-width: 351px){
-	.fixed_menu a {
+	.fixed_menu a:not(.top_logo_icon) {
 		font-size: 15px;
 		margin: 6px 8px;
 	}
@@ -471,7 +483,7 @@ background-position: 20%;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1000px) {/*1000px TEN SONRA ÇALIŞIR VE 601PX DE DURUR*/
-	.fixed_menu a {
+	.fixed_menu a:not(.top_logo_icon) {
 		font-size: 17px;
 		margin: 6px 8px;
 	}
@@ -575,9 +587,6 @@ background-position: 20%;
 		height: 50px;
 		width: 150px;
 		font-size: 22px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 	
 	.icon_top_div {
@@ -652,7 +661,7 @@ background-position: 20%;
 	padding: 20px;
 }
 
-.fixed_menu a:hover {
+.fixed_menu a:not(.top_logo_icon):hover {
 	animation: button_background_hover_ani 0.5s ease-in-out;
 	background: rgba(41, 41, 41, 0.2);
 }
@@ -1076,117 +1085,6 @@ input[type="text"] {
 	display: relative;
 }
 
-.YouTube_video {
-	z-index: 3;
-	padding-left: 700px; 
-	position: relative; 
-	margin-top: -1000px;
-}
-
-.img_slogan {
-	position: absolute;
-	z-index: 2;
-	width: 100%;
-}
-
-.img_slogan_container {
-	display: flex;    
-	flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.big_slogan_text {
-	text-align: center;
-	color: white;
-	font-family: Bebas Neue;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-.small_slogan_text {
-	font-family: Bebas Neue;
-	text-align: center;
-	color: white;
-}
-
-
-.user_photo {
-	border-radius: 50%;
-	height: 30px;
-	width: 30px;
-}
-
-.image_trans {
-	height: 1000px;
-	width: 1000px;
-}
-
-.trans_button {
-	border-radius: 20%;
-	top: 250px;
-	z-index: 7;
-}
-
-.trans_button.right {
-	right: 0px;
-}
-
-.trans_button_cont {
-	display: flex;
-	width: 75px;
-    align-content: center;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-.all_trans_buttons_cont {
-	z-index: 8;
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-}
-
-.transition_sign {
-	height: 45px;
-	background-color: none;
-	position: absolute;
-	top: 733px;
-	left:50%;
-	float: right;
-	z-index: 7;
-	/*border: 2px solid black;*/
-	border-radius: 8px;
-	
-}
-
-.trans_click {
-	float: left;
-	/*width: 50px;
-	height: 14px;*/
-	width: 8px;
-	height: 8px;
-	background-color: rgba(0, 0, 0, 0.08);
-	margin-top: 5.5px;
-	margin-left: 8px;
-	cursor: pointer;
-	border: 1px solid black;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 1), 0 2px 4px 0 rgba(0, 0, 0, 1);
-	border-radius: 6px;
-	
-}
-
-.trans_click.selected {
-	width: 8px;
-	height: 8px;
-	background-color: rgba(0, 0, 0, 0.6);
-	
-	cursor: default;
-}
-
 .container_1_cont {
 	position: relative;
 }
@@ -1248,8 +1146,8 @@ input[type="text"] {
 .container_0 {
 	position: relative;
 	z-index: 2;
-	height: 400px;
-	width: 100%;
+	height: 100vh;
+	width: 100vw;
 }
 
 .container_0_cont {
@@ -1258,15 +1156,15 @@ input[type="text"] {
 	animation: gradient 8s ease infinite;
 	position: absolute;
 	z-index: 3;
-	height: 400px;
-	width: 100%;
+	height: 100vh;
+	width: 100vw;
 	background-color: white;
 }
 
 .container_0_cont_1 {
 	display: flex;
-	height: 400px;
-	width: 100%;
+	height: 100vh;
+	width: 100vw;
 	align-items: center;
     justify-content: center;
 }
@@ -1278,10 +1176,39 @@ input[type="text"] {
     align-items: center;
 }
 
-.c0_upper_text_1 {
+.container_0_header_area {
+	
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_0_contant_area {
+	margin: 40px;
+	display: flex;
+}
+
+.c0_upper_text {
 	color: black;
 	font-family: Bebas Neue;
+	margin-block-start: 0em;
+    margin-block-end: 0em;
 }
+
+.c0_upper_text_header_1 {
+	font-size: 20px;
+}
+.c0_upper_text_header_2 {
+	font-size: 60px;
+}
+
+.c0_upper_text_contant {
+	color: black;
+	font-size:1.2vw;
+	margin: 20px;
+}
+
+
 
 .c_cont_text {
 	top: 0px;
@@ -1367,7 +1294,7 @@ input[type="text"] {
 .container_2_image_part {
 	position: absolute;
 	width: 100%;
-	height: 700px;
+	height: 100vh;
 }
 
 .container_2_text_part_cont_2 {
