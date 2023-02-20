@@ -202,7 +202,7 @@ background-position: 20%;
 .menu_button_clickk {
 	border: solid black 5px;
 	/*background-image: url("https://static.moooi.com/static/images/nav-button.png");*/
-	background-image: url("photos/menu_background.png");
+	background-image: url("../files/photos/menu_background.png");
 	  background-repeat: no-repeat;
 		background-size: 100% 100%;
 	border-radius: 100px;
