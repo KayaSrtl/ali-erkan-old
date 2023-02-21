@@ -625,6 +625,10 @@ function beReadyPage () {
 	window_width = parseInt($( window ).width());
 	
 	//$(".main_div").css("width", window_width);
+	$(".all_photos").css("width", window_width); 
+	$(".all_photos").css("height", window_height); 
+	$(".photo_part").css("width", window_width); 
+	$(".photo_part").css("height", window_height); 
 	$(".img_slogan").css("top", window_height - $( ".img_slogan" ).height() - 50);
 	$(".image_trans").css("height", $( ".photo_part" ).height());
 	$(".image_trans").css("width", window_width); 
