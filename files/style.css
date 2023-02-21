@@ -227,6 +227,7 @@ background-position: 20%;
 	height: 300px; 
 	text-align: center;
 	cursor: grab;
+	overflow: hidden;
 }
 
 .choose_country {
@@ -1042,7 +1043,6 @@ input[type="text"] {
 	opacity: 1;
 	top: 0px;
 	padding-top: 0px;
-	width: calc(100vw - 14.5px);
 	height: 100vh;
 	position: relative;
 }
@@ -1050,7 +1050,6 @@ input[type="text"] {
 .all_photos {
 	float: rigth;
 	top: 45;
-	width: calc(100vw - 14.5px);
 	height: 100vh;
 	background-color: white;
 	position:absolute;
